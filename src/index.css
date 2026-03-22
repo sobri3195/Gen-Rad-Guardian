@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f5f7fb;
+  --foreground: #11233b;
+  --card: rgba(255, 255, 255, 0.92);
+  --card-foreground: #11233b;
+  --popover: #ffffff;
+  --popover-foreground: #11233b;
+  --primary: #0f766e;
+  --primary-foreground: #f8fffe;
+  --secondary: #dbf5f1;
+  --secondary-foreground: #134e4a;
+  --muted: #e9eef5;
+  --muted-foreground: #5f738c;
+  --accent: #dbeafe;
+  --accent-foreground: #1d4ed8;
+  --destructive: #dc2626;
+  --destructive-foreground: #fef2f2;
+  --border: rgba(148, 163, 184, 0.24);
+  --input: rgba(255, 255, 255, 0.96);
+  --ring: rgba(15, 118, 110, 0.32);
+  --chart-1: #0f766e;
+  --chart-2: #2563eb;
+  --chart-3: #7c3aed;
+  --chart-4: #ea580c;
+  --chart-5: #dc2626;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 28%),
+      radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 24%),
+      linear-gradient(180deg, rgba(255,255,255,0.74), rgba(245,247,251,1));
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
